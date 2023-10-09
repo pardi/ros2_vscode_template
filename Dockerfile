@@ -44,5 +44,5 @@ WORKDIR /app
 RUN echo "################# ROS2 ##################"  >> ~/.bashrc && \
     echo "source /opt/ros/${ROS_DISTRO}/setup.bash"  >> ~/.bashrc && \
     echo 'alias cb="colcon build --symlink-install"'  >> ~/.bashrc && \
-    echo 'alias rs="source install/setup.bash"' >> ~/.bashrc \
+    echo 'alias rs="source install/setup.bash"' >> ~/.bashrc && \
     echo "#########################################"  >> ~/.bashrc
