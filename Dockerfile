@@ -40,5 +40,9 @@ RUN useradd -ms /bin/bash user \
 USER user
 WORKDIR /app
 
-RUN echo 'alias cb="colcon build --symlink-install"'  >> ~/.bashrc && \
-    echo 'alias ros_source="source install/setup.bash"' >> ~/.bashrc 
+RUN echo "################# ROS2 ##################"  >> ~/.bashrc && \
+    echo "source /opt/ros/${ROS_DISTRO}/setup.bash"  >> ~/.bashrc && \
+    echo 'alias cb="colcon build --symlink-install"'  >> ~/.bashrc && \
+    echo 'alias rs="source install/setup.bash"' >> ~/.bashrc \
+    echo "#########################################"  >> ~/.bashrc
+
